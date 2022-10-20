@@ -1,7 +1,7 @@
 # Installation and Configuration
 
 1. Open Home Assistant and navigate to the "Add-on Store". Click on the 3 dots (top right) and select "Repositories".
-2. Enter `https://github.com/theengs/HA-addon` in the box and click on "Add".
+2. Enter `https://github.com/theengs/addon-theengsgw` in the box and click on "Add".
 3. You should now see "TheengsGateway HA Add-on" at the bottom list.
 4. Click on "TheengsGateway", then click "Install".
 5. Under the "Configuration" tab, change the settings appropriately (at least MQTT parameters), see [Parameters](#parameters).
