@@ -12,7 +12,7 @@
   "host_network": true,
   "privileged": ["NET_ADMIN", "SYS_ADMIN"],
   "host_dbus": true,
-  "services": ["want"],
+  "services": ["mqtt:want"],
   "map": ["ssl:ro"],
   "options": {
     "MQTT_HOST": "localhost",
