@@ -18,8 +18,8 @@ This Add-on for [Home Assistant](https://www.home-assistant.io/) allows you to r
 
 ## Installation
 
-Install by going to Settings -> Add-ons -> Add-on store -> ⁞ (Menu) -> Repositories -> Fill in the URL `https://github.com/mihsu81/addon-theengsgw` -> Add.
+Install by going to Settings -> Add-ons -> Add-on store -> ⁞ (Menu) -> Repositories -> Fill in the URL `https://github.com/theengs/HA-addon` -> Add.
 
 ## Documentation
 
-See [DOCS.md](https://github.com/mihsu81/addon-theengsgw/blob/main/theengsgateway/DOCS.md).
+See [DOCS.md](https://github.com/theengs/HA-addon/blob/main/theengsgateway/DOCS.md).
