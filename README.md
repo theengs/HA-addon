@@ -1,3 +1,6 @@
+THIS ADDON IS FOR TESTING PURPOSE ONLY
+Please go to https://github.com/mihsu81/addon-theengsgw for the production version.
+
 [![ha_badge](https://img.shields.io/badge/Home%20Assistant-Add%20On-blue.svg)](https://www.home-assistant.io/)
 # [TheengsGateway](https://theengs.github.io/gateway/) Home Assistant supervisor add-on
 
