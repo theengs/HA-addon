@@ -15,6 +15,7 @@ MQTT_SUB_TOPIC=$(bashio::config 'MQTT_SUB_TOPIC')
 MQTT_PRE_TOPIC=$(bashio::config 'MQTT_PRE_TOPIC')
 PRESENCE=$(bashio::config 'PRESENCE')
 PUBLISH_ALL=$(bashio::config 'PUBLISH_ALL')
+PUBLISH_ADVDATA=$(bashio::config 'PUBLISH_ADVDATA')
 SCAN_DUR=$(bashio::config 'SCAN_DUR')
 TIME_BETWEEN=$(bashio::config 'TIME_BETWEEN')
 LOG_LEVEL=$(bashio::config 'LOG_LEVEL')
@@ -37,6 +38,7 @@ TIME_FORMAT=$(bashio::config 'TIME_FORMAT')
     echo "    \"presence_topic\": \"${MQTT_PRE_TOPIC}\","
     echo "    \"presence\": ${PRESENCE},"
     echo "    \"publish_all\": ${PUBLISH_ALL},"
+    echo "    \"publish_advdata\": ${PUBLISH_ADVDATA},"
     echo "    \"ble_scan_time\": ${SCAN_DUR},"
     echo "    \"ble_time_between_scans\": ${TIME_BETWEEN},"
     echo "    \"log_level\": \"${LOG_LEVEL}\","
