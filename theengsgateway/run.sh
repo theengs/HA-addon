@@ -28,6 +28,8 @@ TIME_SYNC=$(bashio::config 'TIME_SYNC')
 TIME_FORMAT=$(bashio::config 'TIME_FORMAT')
 IDENTITIES=$(bashio::config 'IDENTITIES')
 BINDKEYS=$(bashio::config 'BINDKEYS')
+ENABLE_TLS=$(bashio::config 'ENABLE_TLS')
+ENABLE_WEBSOCKET=$(bashio::config 'ENABLE_WEBSOCKET')
 
 # Convert the booleans to integers (1 for true, 0 for false) in single lines
 PRESENCE=$( [ "$PRESENCE" = "true" ] && echo 1 || echo 0 )
