@@ -64,8 +64,15 @@ ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
     echo "    \"time_format\": \"${TIME_FORMAT}\"",
     echo "    \"enable_tls\": ${ENABLE_TLS}",
     echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
-    echo "    \"identities\": $IDENTITIES_JSON,"
-    echo "    \"bindkeys\": $BINDKEYS_JSON"
+    # Check if IDENTITIES is not empty, then include it
+    if [ -n "${IDENTITIES}" ]; then
+        echo ",    \"identities\": $IDENTITIES,"
+    fi
+
+    # Check if BINDKEYS is not empty, then include it
+    if [ -n "${BINDKEYS}" ]; then
+        echo ",    \"bindkeys\": $BINDKEYS"
+    fi
     echo "}"
 } > "${CONFIG}"
 
