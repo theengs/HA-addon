@@ -40,6 +40,29 @@ TIME_FORMAT=$( [ "$TIME_FORMAT" = "true" ] && echo 1 || echo 0 )
 ENABLE_TLS=$( [ "$ENABLE_TLS" = "true" ] && echo 1 || echo 0 )
 ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
 
+# Function to convert space-separated pairs into a JSON object
+convert_to_json() {
+    local input=$1
+    local json="{"
+    local first=true
+
+    while read -r mac value; do
+        if [ "$first" = true ]; then
+            first=false
+        else
+            json+=","
+        fi
+        json+="\"$mac\": \"$value\""
+    done <<< "$(echo $input | tr '"' '\n')"
+
+    json+="}"
+    echo $json
+}
+
+# Convert IDENTITIES and BINDKEYS to JSON format
+IDENTITIES_JSON=$(convert_to_json "$IDENTITIES")
+BINDKEYS_JSON=$(convert_to_json "$BINDKEYS")
+
 {
     echo "{"
     echo "    \"host\": \"${MQTT_HOST}\","
@@ -64,8 +87,8 @@ ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
     echo "    \"time_format\": \"${TIME_FORMAT}\"",
     echo "    \"enable_tls\": ${ENABLE_TLS}",
     echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
-    echo "    \"identities\": \"${IDENTITIES}\"",
-    echo "    \"bindkeys\": \"${BINDKEYS}\""
+    echo "    \"identities\": $IDENTITIES_JSON,"
+    echo "    \"bindkeys\": $BINDKEYS_JSON"
     echo "}"
 } > "${CONFIG}"
 
