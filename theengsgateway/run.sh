@@ -59,20 +59,13 @@ ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
     echo "    \"discovery_topic\": \"${DISCOVERY_TOPIC}\","
     echo "    \"discovery_device_name\": \"${DISCOVERY_DEVICE_NAME}\","
     echo "    \"discovery_filter\": \"${DISCOVERY_FILTER}\","
-    echo "    \"adapter\": \"${ADAPTER}\","
-    echo "    \"time_sync\": \"${TIME_SYNC}\","
-    echo "    \"time_format\": ${TIME_FORMAT},"
-    echo "    \"enable_tls\": ${ENABLE_TLS},"
-    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET},"
-    # Add IDENTITIES if not empty
-    if [ -n "$IDENTITIES" ]; then
-        echo "    \"identities\": ${IDENTITIES},"
-    fi
-
-    # Add BINDKEYS if not empty
-    if [ -n "$BINDKEYS" ]; then
-        echo "    \"bindkeys\": ${BINDKEYS}"
-    fi
+    echo "    \"adapter\": \"${ADAPTER}\"",
+    echo "    \"time_sync\": ${TIME_SYNC}",
+    echo "    \"time_format\": \"${TIME_FORMAT}\"",
+    echo "    \"enable_tls\": ${ENABLE_TLS}",
+    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
+    echo "    \"identities\": \"${IDENTITIES}\"",
+    echo "    \"bindkeys\": \"${BINDKEYS}\""
     echo "}"
 } > "${CONFIG}"
 
