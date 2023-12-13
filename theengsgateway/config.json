@@ -37,8 +37,8 @@
     "TIME_FORMAT": false,
     "ENABLE_TLS": false,
     "ENABLE_WEBSOCKET": false,
-    "IDENTITIES": "{\"AA:BB:CC:DD:EE:FF\": \"Device1\", \"11:22:33:44:55:66\": \"Device2\"}",
-    "BINDKEYS": "{\"AA:BB:CC:DD:EE:FF\": \"0102030405060708090a0b0c0d0e0f10\", \"11:22:33:44:55:66\": \"1102030405060708090a0b0c0d0e0f11\"}"
+    "IDENTITIES": "",
+    "BINDKEYS": ""
   },
   "schema": {
     "MQTT_HOST": "str",
