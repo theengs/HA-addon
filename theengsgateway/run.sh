@@ -3,7 +3,7 @@ set -e
 
 CONFIG="/root/theengsgw.conf"
 
-bashio::log.info "Creating TheengsGateway configuration...1"
+bashio::log.info "Creating TheengsGateway configuration...2"
 
 # Create TheengsGateway config
 MQTT_HOST=$(bashio::config 'MQTT_HOST')
@@ -63,15 +63,19 @@ ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
     echo "    \"time_sync\": ${TIME_SYNC}",
     echo "    \"time_format\": \"${TIME_FORMAT}\"",
     echo "    \"enable_tls\": ${ENABLE_TLS}",
-    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
+    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}"
     # Check if IDENTITIES is not empty, then include it
     if [ -n "${IDENTITIES}" ]; then
-        echo ",    \"identities\": \"${IDENTITIES}\"",
+        echo ",    \"identities\": \"${IDENTITIES}\""
+    else
+        echo ""
     fi
 
     # Check if BINDKEYS is not empty, then include it
     if [ -n "${BINDKEYS}" ]; then
         echo ",    \"bindkeys\": \"${BINDKEYS}\""
+    else
+        echo ""
     fi
     echo "}"
 } > "${CONFIG}"
