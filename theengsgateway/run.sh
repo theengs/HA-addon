@@ -66,12 +66,12 @@ ENABLE_WEBSOCKET=$( [ "$ENABLE_WEBSOCKET" = "true" ] && echo 1 || echo 0 )
     echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
     # Check if IDENTITIES is not empty, then include it
     if [ -n "${IDENTITIES}" ]; then
-        echo ",    \"identities\": $IDENTITIES,"
+        echo ",    \"identities\": ${IDENTITIES}",
     fi
 
     # Check if BINDKEYS is not empty, then include it
     if [ -n "${BINDKEYS}" ]; then
-        echo ",    \"bindkeys\": $BINDKEYS"
+        echo ",    \"bindkeys\": ${BINDKEYS}"
     fi
     echo "}"
 } > "${CONFIG}"
