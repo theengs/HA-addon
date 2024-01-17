@@ -18,6 +18,7 @@ PUBLISH_ALL=$(bashio::config 'PUBLISH_ALL')
 PUBLISH_ADVDATA=$(bashio::config 'PUBLISH_ADVDATA')
 SCAN_DUR=$(bashio::config 'SCAN_DUR')
 TIME_BETWEEN=$(bashio::config 'TIME_BETWEEN')
+TRACKER_TIMEOUT=$(bashio::config 'TRACKER_TIMEOUT')
 LOG_LEVEL=$(bashio::config 'LOG_LEVEL')
 DISCOVERY=$(bashio::config 'DISCOVERY')
 DISCOVERY_TOPIC=$(bashio::config 'DISCOVERY_TOPIC')
@@ -57,6 +58,7 @@ bashio::log.info "BINDKEYS: ${BINDKEYS}"
     echo "    \"publish_advdata\": ${PUBLISH_ADVDATA},"
     echo "    \"ble_scan_time\": ${SCAN_DUR},"
     echo "    \"ble_time_between_scans\": ${TIME_BETWEEN},"
+    echo "    \"tracker_timeout\": ${TRACKER_TIMEOUT},"
     echo "    \"log_level\": \"${LOG_LEVEL}\","
     echo "    \"discovery\": \"${DISCOVERY}\","
     echo "    \"discovery_topic\": \"${DISCOVERY_TOPIC}\","
