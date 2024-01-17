@@ -23,9 +23,10 @@
 | PUBLISH_ADVDATA       | boolean | No       | Publish advertisements data if true, defaults to `no`                           |
 | SCAN_DUR              | int     | No       | BLE scan duration (seconds), defaults to `60`                                   |
 | TIME_BETWEEN          | int     | No       | Seconds to wait between scans, defaults to `60`                                 |
+| TRACKER_TIMEOUT       | int     | No       | Seconds before a tracker is declared as offline `120`                           |
 | LOG_LEVEL             | string  | No       | TheengsGateway log level, defaults to `WARNING`                                 |
 | DISCOVERY             | boolean | No       | Activate discovery or not `true`                                                |
-| DISCOVERY_TOPIC       | string  | No       | Home Assistant discovery topic`homeassistant`                            |
+| DISCOVERY_TOPIC       | string  | No       | Home Assistant discovery topic`homeassistant`                                   |
 | DISCOVERY_DEVICE_NAME | string  | No       | Device name `TheengsGateway`                                                    |
 | DISCOVERY_FILTER      | string  | No       | Excluded BLE devices models `[IBEACON,GAEN,MS-CDP,APPLE_CONT]`                  |
 | ADAPTER               | string  | No       | Bluetooth adapter (e.g. hci1 on Linux)                                          |
