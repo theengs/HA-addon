@@ -37,5 +37,6 @@
 | BINDKEYS              | json    | No       | Addresses and key to decrypt data, example { "00:11:22:33:44:55:66":"0dc540f3025b474b9ef1085e051b1add","AA:BB:CC:DD:EE:FF":"6385424e1b0341109942ad2a6bb42e58"}              |
 | ENABLE_TLS            | boolean | No       | Activate TLS                                                                    |
 | ENABLE_WEBSOCKET      | boolean | No       | Activate WebSocket                                                              |
+| BLE                   | boolean | No       | Enable Bluetooth usage                                                          |
 
 For more details please refer to [TheengsGateway](https://theengs.github.io/gateway/).

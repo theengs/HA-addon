@@ -39,7 +39,8 @@
     "ENABLE_TLS": false,
     "ENABLE_WEBSOCKET": false,
     "IDENTITIES": "",
-    "BINDKEYS": ""
+    "BINDKEYS": "",
+    "BLE":true
   },
   "schema": {
     "MQTT_HOST": "str",
@@ -67,6 +68,7 @@
     "ENABLE_TLS": "bool?",
     "ENABLE_WEBSOCKET": "bool?",
     "IDENTITIES": "str?",
-    "BINDKEYS": "str?"
+    "BINDKEYS": "str?",
+    "BLE": "bool?"
   }
 }
