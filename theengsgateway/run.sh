@@ -31,8 +31,10 @@ IDENTITIES=$(bashio::config 'IDENTITIES')
 BINDKEYS=$(bashio::config 'BINDKEYS')
 ENABLE_TLS=$(bashio::config 'ENABLE_TLS')
 ENABLE_WEBSOCKET=$(bashio::config 'ENABLE_WEBSOCKET')
+BLE=$(bashio::config 'BLE')
 
 # Convert the booleans to integers (1 for true, 0 for false) in single lines
+BLE=$( [ "$BLE" = "true" ] && echo 1 || echo 0 )
 PRESENCE=$( [ "$PRESENCE" = "true" ] && echo 1 || echo 0 )
 PUBLISH_ALL=$( [ "$PUBLISH_ALL" = "true" ] && echo 1 || echo 0 )
 PUBLISH_ADVDATA=$( [ "$PUBLISH_ADVDATA" = "true" ] && echo 1 || echo 0 )
@@ -68,7 +70,8 @@ bashio::log.info "BINDKEYS: ${BINDKEYS}"
     echo "    \"time_sync\": ${TIME_SYNC}",
     echo "    \"time_format\": \"${TIME_FORMAT}\"",
     echo "    \"enable_tls\": ${ENABLE_TLS}",
-    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}"
+    echo "    \"enable_websocket\": ${ENABLE_WEBSOCKET}",
+    echo "    \"ble\": ${BLE}"
     # Check if IDENTITIES is not empty, then include it
     if [ -n "${IDENTITIES}" ]; then
         echo ",    \"identities\": ${IDENTITIES}"
